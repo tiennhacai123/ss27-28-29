@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+function counts(chuoi, kyTu) {
+    let count = 0;
+    for (let i = 0; i < chuoi.length; i++) {
+        if (chuoi[i] === kyTu) {
+            count++;
+        }
+    }
+    return count;
+}
+let string = prompt("Nhap vao 1 chuoi:");
+let a = prompt("Nhap vao mot ky tu:");
+let soLanXuatHien = counts(string, a);
+console.log(`So lan xuat hien cua ky tu ${a} trong chuoi la: ${soLanXuatHien}`);
+   </script>
+</html>

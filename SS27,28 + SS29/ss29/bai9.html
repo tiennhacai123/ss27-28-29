@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<a>Callback Function (Hàm gọi lại) là một hàm được truyền vào một hàm khác như một đối số và được gọi sau khi hoạt động của hàm chính đã hoàn thành. <br>Chức năng của Callback Function: Thực hiện một hành động khi một tác vụ hoàn thành: Callback functions thường được sử dụng để xác định hành động nào đó sẽ được thực hiện sau khi một tác vụ không đồng bộ (ví dụ: đọc file, gọi API) hoàn thành. Truyền hàm như một đối số: Callback functions giúp truyền hàm như một tham số cho một hàm khác, mở rộng khả năng sử dụng hàm đó.</a>    
+<h3>Cách Callback Function Hoạt Động trong JavaScript: Trong console
+</h3>
+</body>
+<script>
+console.log("Synchronous Callbacks (Callback đồng bộ): Đây là loại callback mà hàm được truyền vào được gọi ngay lập tức bên trong hàm chính.")
+function doSomething(callback) {
+    console.log("Doing something...");
+    callback();
+}
+
+function callbackFunction() {
+    console.log("Callback function is called.");
+}
+
+doSomething(callbackFunction);
+console.log("Asynchronous Callbacks (Callback không đồng bộ): Đây là trường hợp phổ biến trong JavaScript khi sử dụng các hàm không đồng bộ như setTimeout, setInterval, hoặc khi thực hiện các yêu cầu HTTP (AJAX).")
+function doSomethingAsync(callback) {
+    console.log("Doing something asynchronously...");
+    setTimeout(function () {
+        console.log("Async operation is done.");
+        callback();
+    }, 2000);
+}
+
+function callbackFunction() {
+    console.log("Callback function is called.");
+}
+
+doSomethingAsync(callbackFunction);
+
+
+</script>
+</html>

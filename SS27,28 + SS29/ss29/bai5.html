@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+function findStr(arr, str) {
+    let found = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].includes(str)) {
+            found.push(arr[i]);
+        }
+    }
+    return found;
+}
+let arr = ["le tien", "nam son", "the minh", "duy hien"];
+let str = prompt("Nhap vao mot chuoi:");
+let result = findStr(arr, str);
+if (result.length > 0) {
+    console.log(result);
+} else {
+    console.log("Khong co chuoi nao hop le");
+}   
+</script>
+</html>
